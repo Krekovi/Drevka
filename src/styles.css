@@ -94,13 +94,22 @@ header{
 /* .header__logo{
     max-height: 145px;
 } */
-.header__logo h1{
+.header__logo a h1{
     letter-spacing: 10px;
     font-size: 42px;
+    color: #bea97c;
 }
 
 .header__top{
     font-family: 'Open Sans', sans-serif;
+    position: fixed;
+    background-color: #000;
+    width: 100%;
+}
+
+.header__top__inner{
+    width: 100%;
+    max-width: 1250px;
     display: flex;
     justify-content: space-between;
     font-weight: 700;
@@ -144,10 +153,13 @@ header{
 .header__content{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 110px 0px 110px;
+    padding: 220px 0px 110px;
     max-width: 1250px;
     width: 100%;
+}
+
+.burger__menu{
+    display: none;
 }
 
 .header__content-about-us{
@@ -552,5 +564,47 @@ header{
     color: #000;
 }
 
+@media screen and (max-width: 989px){
+    .header__top__inner{
+        justify-content: space-between;
+    }
 
+    .menu{
+        display: none;
+    }
 
+    .languages {
+        display: none;
+    }
+
+    .burger__menu{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1230px){
+    .header__content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__content__image{
+        height: 300px;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .header__content-about-us h1{
+        font-size: 32px;
+        letter-spacing: 2px;
+        line-height: 45px;
+    }
+
+    
+    .header__logo a h1{
+        letter-spacing: 3px;
+        font-size: 22px;
+        color: #bea97c;
+    }
+}
